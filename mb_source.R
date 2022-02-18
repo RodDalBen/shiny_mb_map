@@ -29,16 +29,8 @@ library(here)
 library(googlesheets4) 
 library(countrycode)
 
-# load credentials
-options(
-  gargle_oauth_cache = ".secrets", 
-  gargle_oauth_email = "your@email.com"
-  ) 
-
-#googlesheets4::gs4_auth()
-
-# load database 
-collaborators <- googlesheets4::read_sheet("1Q9hQZ-Nop6Vqq3Ezre8waVU_qDsGhnJLsWYPh5nAih8")
+# load database - add  google sheet link here, but delete afterwards. Keep the google sheet url safe!
+collaborators <- googlesheets4::read_sheet("")
 
 # clean databse 
 mb_collaborators <- 
@@ -480,3 +472,4 @@ summary_mb3n <-
     institution = paste(unique(institution), collapse = ", "),
     researcher = paste(unique(researcher), collapse = ", ")
   )
+

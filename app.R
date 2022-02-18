@@ -4,8 +4,12 @@ library(shiny)
 library(leaflet)
 library(htmltools)
 library(DT)
-library(shinydashboardPlus)
 library(shinyjs)
+library(shinydashboardPlus) # v. 0.7.5 -- otherwise will break, see steps below
+
+# run this on your console to get the older version:
+# require(devtools)
+# install_version("shinydashboardPlus", version = "0.7.5", repos = "http://cran.us.r-project.org")
 
 #####
 # To-do:
