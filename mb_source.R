@@ -29,7 +29,17 @@ library(here)
 library(googlesheets4) 
 library(countrycode)
 
-# load database - add  google sheet link here, but delete afterwards. Keep the google sheet url safe!
+
+# load credentials
+options(
+  gargle_oauth_cache = ".secrets", 
+  gargle_oauth_email = "your@email.com"
+) 
+
+googlesheets4::gs4_auth()
+
+# load database - add google sheet link here, but delete afterwards. 
+# Keep the MB google sheet url safe!
 collaborators <- googlesheets4::read_sheet("")
 
 # clean databse 
